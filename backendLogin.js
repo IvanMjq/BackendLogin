@@ -6,8 +6,8 @@ const existMembers = [
 //function to validate the username and password
 function validateLogin(username, password) {
     for(let i = 0; i < existMembers.length; i++) {
-        if(existMembers[i].username === username) {
-            if(existMembers[i].password === password) {
+        if(existMembers[i].username == username) {
+            if(existMembers[i].password == password) {
                 return {isValid : true, meesage : 'Login Successful'};
             } else {
                 return {isValid : false, message : 'Login Failed'};
@@ -25,7 +25,7 @@ const registeredMembersDetails = [    //used to store the register users details
 //function to register a new user
 function registerMember(username, password, name, birthday, address) {
     for (let i = 0; i < existMembers.length; i++) {
-        if (existMembers[i].username === username) {
+        if (existMembers[i].username == username) {
           return {isSuccess : false, message : 'Username already taken' };
         }
     }
